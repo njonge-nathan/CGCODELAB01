@@ -28,3 +28,8 @@ shuffled_data.to_json('shuffled_data.json', orient='records')
 # Save as JSONL (JSON Lines)
 shuffled_data.to_json('shuffled_data.jsonl', orient='records', lines=True)
 
+from googleapiclient.discovery import build
+
+API_KEY = 'AIzaSyDQ0u8cpm9b1lRn0enOqYT8btoCb-fll54'
+
+drive_service = build('drive', 'v3', developerKey=API_KEY)
